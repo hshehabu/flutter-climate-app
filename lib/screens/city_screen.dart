@@ -24,7 +24,10 @@ class _CityScreenState extends State<CityScreen> {
               Align(
                 alignment: Alignment.topLeft,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  style: kButtonBGStyle,
                   child: Icon(
                     Icons.arrow_back_ios,
                     size: 50.0,
@@ -33,10 +36,16 @@ class _CityScreenState extends State<CityScreen> {
               ),
               Container(
                 padding: EdgeInsets.all(20.0),
-                child: null,
+                child: TextField(
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                  decoration: kTextInputDecoration,
+                ),
               ),
               ElevatedButton(
                 onPressed: () {},
+                style: kButtonBGStyle,
                 child: Text(
                   'Get Weather',
                   style: kButtonTextStyle,
