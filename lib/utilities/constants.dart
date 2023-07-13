@@ -37,4 +37,5 @@ const kConditionTextStyle = TextStyle(
 
 var kButtonBGStyle = ButtonStyle(
   backgroundColor: MaterialStateProperty.all(Colors.transparent),
+  elevation: MaterialStateProperty.all(0),
 );
