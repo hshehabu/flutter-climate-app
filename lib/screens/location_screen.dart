@@ -86,7 +86,17 @@ class _LocationScreenState extends State<LocationScreen> {
                       if (typedName != null) {
                         var weatherData =
                             await weatherModel.getCityWeather(typedName);
-                       updateUI(weatherData);
+                        if (weatherData != null) {
+                          updateUI(weatherData);
+                        } else {
+                          // Display error message
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content:
+                                  Text('City not found. Please try again.'),
+                            ),
+                          );
+                        }
                       }
                     },
                     style: kButtonBGStyle,
